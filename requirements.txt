@@ -1,0 +1,11 @@
+langchain
+langchain-community
+langchain-chroma
+langchain-huggingface
+langchain-openai
+sentence-transformers
+chromadb
+python-telegram-bot
+openai
+pandas
+nest-asyncio
