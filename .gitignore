@@ -1,3 +1,33 @@
+# Archivos de Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.venv/
+venv/
+
+# Archivos temporales / cachés
+*.log
+*.tmp
+
 # Entornos y variables privadas
 .env
 *.env
+
+# Configuración de VS Code
+.vscode/
+
+# Archivos grandes o privados
+mis_archivos/
+base_datos*/
+*.xlsx
+*.csv
+*.pdf
+*.zip
+
+# Colab y Jupyter
+.ipynb_checkpoints/
+
+# Archivos del sistema
+.DS_Store
+Thumbs.db
