@@ -57,7 +57,7 @@ ids = [ str(i) for i in range( len(documents) ) ]
 # Agregar archivos Excel, CSV
 import pandas as pd
 
-nombre_archivo = "./mis_archivos/Copia de Tabla productos.xlsx"
+nombre_archivo = "./mis_archivos/Tablaproductos.xlsx"
 if nombre_archivo != "":
     tabla = pd.read_excel(nombre_archivo)
 
@@ -121,10 +121,9 @@ recuperador = base_datos_vectorial.as_retriever()
 from langchain_openai import ChatOpenAI
 from dotenv import load_dotenv
 import os
+import openai
 
 load_dotenv()
-import openai
-# Llave de acceso
 API_KEY = os.getenv("OPENAI_API_KEY")
 
 modelo = ChatOpenAI(
