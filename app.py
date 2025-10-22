@@ -24,6 +24,7 @@ drive.mount('/content/drive')
 #!pip install python-telegram-bot
 #!pip install openai
 #!pip install langchain-openai
+#py -m pip install python-dotenv
 
 """## **2. Agregar documentos al asistente**"""
 
@@ -118,10 +119,13 @@ recuperador = base_datos_vectorial.as_retriever()
 # Crear modelo de ChatGpt
 
 from langchain_openai import ChatOpenAI
+from dotenv import load_dotenv
+import os
 
+load_dotenv()
 import openai
 # Llave de acceso
-API_KEY  = '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'
+API_KEY = os.getenv("OPENAI_API_KEY")
 
 modelo = ChatOpenAI(
     model="gpt-4.1",
@@ -199,7 +203,7 @@ from telegram import Update
 from telegram.ext import ApplicationBuilder, CommandHandler, MessageHandler, filters, ContextTypes
 
 logging.basicConfig(level=logging.INFO)
-TOKEN = "8210771410:AAGe4pc_No5NK_vD42nPpQltUs8AQlB5EC0"
+TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
 
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text("¡Hola! Soy PACO-POP, tu asistente de compras 🛒")

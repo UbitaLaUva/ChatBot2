@@ -1,0 +1,3 @@
+# Entornos y variables privadas
+.env
+*.env
