@@ -17,13 +17,7 @@ venv/
 # Configuración de VS Code
 .vscode/
 
-# Archivos grandes o privados
-mis_archivos/
-base_datos*/
-*.xlsx
-*.csv
-*.pdf
-*.zip
+
 
 # Colab y Jupyter
 .ipynb_checkpoints/
